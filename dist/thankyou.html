@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    
+    <title>Reservation Confirmed - Hotel Reservation</title>
+</head>
+
+<body class="bg-gray-100 font-sans text-gray-800">
+
+    <header class="bg-sky-950 text-white text-center py-4">
+        <h1 class="text-2xl font-bold">Reservation Confirmed!</h1>
+    </header>
+
+    <main class="max-w-3xl mx-auto my-8 p-6 md:p-8 bg-white rounded-lg shadow-md text-center">
+
+        <section class="mb-6">
+            <h2 class="text-3xl font-bold text-brand-red mb-4">Thank You For Your Booking!</h2>
+            <p class="text-lg text-gray-700 leading-relaxed">
+                Your reservation at Grand Mogador Agdal & Spa (Example) is confirmed.
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed mt-2">
+                A confirmation email with all the details has been sent to <strong id="customer-email"
+                    class="font-semibold text-gray-900">[Customer Email Address]</strong>.
+            </p>
+        </section>
+
+        <section class="my-8 p-6 bg-gray-50 border border-gray-200 rounded-lg text-left">
+            <h3 class="text-xl font-semibold text-brand-red mb-4 border-b border-gray-300 pb-2">Your Booking Details:
+            </h3>
+            <div class="space-y-2 text-gray-700">
+                <div class="flex justify-between"><strong>Booking ID:</strong> <span id="booking-id"
+                        class="font-mono text-gray-600">[Booking Reference ID]</span></div>
+                <div class="flex justify-between"><strong>Name:</strong> <span id="customer-name"
+                        class="text-gray-600">[Customer Full Name]</span></div>
+                <div class="flex justify-between"><strong>Hotel:</strong> <span class="text-gray-600">Grand Mogador
+                        Agdal & Spa (Example)</span></div>
+                <div class="flex justify-between"><strong>Room Type:</strong> <span class="text-gray-600">Deluxe Double
+                        Room (Example)</span></div>
+                <div class="flex justify-between"><strong>Dates:</strong> <span class="text-gray-600">April 26, 2025 -
+                        April 28, 2025 (Example)</span></div>
+                <div class="flex justify-between"><strong>Guests:</strong> <span class="text-gray-600">2 Adults
+                        (Example)</span></div>
+                <div
+                    class="flex justify-between text-lg font-bold text-brand-red pt-2 border-t border-dashed border-gray-300 mt-2">
+                    <strong>Total Paid:</strong> <span>$XXX.XX (Example)</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-8 text-left">
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">Important Information & Next Steps:</h3>
+            <ul class="list-disc pl-5 space-y-2 text-gray-600 leading-relaxed">
+                <li>Please check your email for the full confirmation details.</li>
+                <li>Check-in time starts at <span class="font-semibold">[Hotel Check-in Time, e.g., 3:00 PM]</span>.
+                </li>
+                <li>Check-out time is by <span class="font-semibold">[Hotel Check-out Time, e.g., 11:00 AM]</span>.</li>
+                <li>If you have any questions, please contact us at <span class="font-semibold">[Hotel Phone
+                        Number]</span> or <span class="font-semibold">[Hotel Email Address]</span>.</li>
+                <li>We look forward to welcoming you!</li>
+            </ul>
+        </section>
+
+        <section class="mt-10">
+            <a href="/"
+                class="inline-block bg-gray-600 text-white font-semibold py-2 px-6 rounded-md hover:bg-gray-700 transition duration-200 ease-in-out">
+                Back to Homepage
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="bg-sky-950 text-white text-center py-4 mt-12">
+        <p class="text-sm">&copy; 2025 Your Hotel Name. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

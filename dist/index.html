@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <meta http-equiv="refresh" content="2"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./src/home.css">
+    <title>Hotels Mogador</title>
+</head>
+
+<body>
+
+    <div
+        class="sticky-booking-btn fixed bottom-0 left-0 w-full bg-sky-950 transition-all ease-in-out translate-y-full z-[99999]">
+        <div class="content flex items-center justify-center px-5 py-3">
+            <div data-offer="save" data-discount="-50%" class="sticky-btn-booking">
+                <button class="openReservation bg-white px-5 py-3 uppercase font-bold text-sky-950 cursor-pointer">Réservez Votre séjour</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="w-full overflow-hidden">
+        <!-- <section class="slider w-full">
+            <div class="content bg-sky-950 px-5 py-2 ">
+                <p class=" text-center text-white font-bold uppercase text-sm">escape to serenit at mogador hotel - your
+                    oasis awaits</p>
+            </div>
+        </section> -->
+
+        <section class="hero w-full relative">
+            <div class="overflow-bg absolute left-0 top-0 w-full h-full"></div>
+            <div class="content w-[90%] h-full m-auto z-10 relative ">
+                <div class="title mb-2">
+                    <h1 class=" text-6xl uppercase font-bold text-white w-[560px]">Votre escapade Familiale au Grand Mogador Agdal</h1>
+                </div>
+                <div class="desc mb-2">
+                    <p class="text-white text-xl font-semibold w-[465px]">Savourez vos vacances de printemps en famille</p>
+                </div>
+                <div class="book-now mt-16 relative">
+                    <div data-offer="save" data-discount="-50%" class="btn-booking relative z-96">
+                        <button
+                            class="openReservation bg-white px-5 py-3 uppercase font-black text-sky-950 cursor-pointer">Réservez Votre séjour</button>
+                    </div>
+                    <div class="hero-arrow absolute right-0 top-0">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1080 1080"
+                            enable-background="new 0 0 1080 1080" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path fill="#fff"
+                                        d="M237.8,311.1c81.7,12.8,166.8,49.2,226.4,107.4c47,45.5,77.5,107.3,84.9,172.3
+                                        c3.5,30.2-0.1,67.5-28.3,85.3c-19.2,12.1-43.6,11.8-64.9,6.7c-33.5-8.2-71.7-30.8-87-62.9c-1.8-3.9-3.1-7.9-4-12.1
+                                        c-1.8-10.6-1.4-21.6,1.3-32.1c14.2-50.8,72.4-75.3,119.7-85.1c79.7-15.5,170.9-2.9,234.3,50.7c40.4,37.1,72.4,84.8,88.7,137.3
+                                        c6.2,20.7,10.4,42.2,9.9,63.9c0.2-14.4-2.1-28.7-5.3-42.7c-6.5-28-17.8-54.8-32.5-79.4c-16.7-27.5-37.1-53-60.9-74.7
+                                        c-8-7.1-16.7-13.4-25.8-19C639,493.1,571.4,484,508.1,492.1c-35,4.9-70.3,15.3-99.4,35.8c-17,12.2-31.6,28.8-36.9,49.3
+                                        c-2.5,9.6-2.9,19.7-1.2,29.5c1.5,7.1,4.7,13.8,8.7,19.9c24.4,36.2,87,65.4,129.5,49.5c1.3-0.5,3.4-1.5,4.7-2.1
+                                        c0.8-0.5,2.6-1.4,3.4-1.8c0,0,1.1-0.7,1.1-0.7s2.1-1.4,2.1-1.4c3.4-2.5,6.7-5.4,9.4-8.6c17.1-20.7,17-49.9,14-75.3
+                                        c-11.7-91.1-67.1-167.7-145.2-214.5C349.3,341.6,294.3,321.1,237.8,311.1L237.8,311.1z" />
+                                </g>
+                                <g>
+                                    <path fill="#fff"
+                                        d="M791.8,736.6c11.8,7.5,22.6,16.3,33.1,25.5c0,0-4.5,0.9-4.5,0.9c6.4-13.4,13.4-26.6,21.9-38.8
+                                        c-4.6,15.5-11.3,30.3-18.3,44.8C812.6,758.8,801.4,748.4,791.8,736.6L791.8,736.6z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main class="overflow-hidden">
+        <!-- Popup Container -->
+        <div id="reservationPopup"
+            class="fixed inset-0 bg-[#000000db] bg-opacity-70 hidden items-center justify-center z-[9999999999]">
+            <div class="bg-white p-8 w-[90%] max-w-md rounded-xl relative text-center font-sans">
+                <span id="closePopup"
+                    class="absolute top-3 right-4 text-2xl text-gray-600 cursor-pointer">&times;</span>
+                <h2 class="text-2xl text-sky-950 font-bold mb-4">Réservez Votre Séjour</h2>
+                <form id="reservationForm" class="space-y-4">
+                    <select required class="w-full px-4 py-2 border border-gray-300 rounded">
+                        <option value="">Choisissez votre destination</option>
+                        <option value="Marrakech">Marrakech</option>
+                        <option value="Tanger">Tanger</option>
+                    </select>
+                    <div class="text-left">
+                        <label class="font-semibold text-sm">Date d’arrivée</label>
+                        <input type="date" required class="w-full px-4 py-2 border border-gray-300 rounded mt-1" />
+                    </div>
+                    <div class="text-left">
+                        <label class="font-semibold text-sm">Date de départ</label>
+                        <input type="date" required class="w-full px-4 py-2 border border-gray-300 rounded mt-1" />
+                    </div>
+                    <button type="submit"
+                        class="bg-sky-950 hover:bg-red-900 text-white py-2 px-4 w-full rounded uppercase font-bold mt-2">
+                        <a href="./checkout.html">RÉSERVER MAINTENANT</a>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <section id="rooms-gallery" class="w-full">
+            <!-- <div class="gallery fixed z-[99999999999] w-full h-full top-0 left-0 hidden">
+                <div id="close-gallery"
+                    class="close-gallery absolute top-10 right-10 fill-white z-[999999999] cursor-pointer"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+                        <path
+                            d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z">
+                        </path>
+                    </svg></div>
+                <div
+                    class="display-gallery overflow-hidden absolute z-[99999999] top-1/2 left-1/2 w-5/6 h-[85vh] -translate-x-1/2 -translate-y-1/2">
+                    <img id="gallery-show" width="40%" src="" alt="">
+                </div>
+                <div class="overflow-shadow absolute w-full h-full bg-black opacity-80 top-0 left-0 z-[9999999]"></div>
+            </div> -->
+            <div class="content mt-16 w-[90%] mx-auto">
+
+                <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <li class="glide__slide">
+                                <div class="card">
+                                    <div class="content w-full h-full">
+                                        <div class="img w-full" data-src="./media/img/rooms/room1.jpg">
+                                            <img src="./media/img/rooms/room1.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div class="card">
+                                    <div class="content w-full h-full">
+                                        <div class="img w-full" data-src="./media/img/rooms/room2.jpg">
+                                            <img src="./media/img/rooms/room2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div class="card">
+                                    <div class="content w-full h-full">
+                                        <div class="img w-full" data-src="./media/img/rooms/room3.jpg">
+                                            <img src="./media/img/rooms/room3.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div class="card">
+                                    <div class="content w-full h-full">
+                                        <div class="img w-full" data-src="./media/img/rooms/room2.jpg">
+                                            <img src="./media/img/rooms/room4.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div class="card">
+                                    <div class="content w-full h-full">
+                                        <div class="img w-full" data-src="./media/img/rooms/room2.jpg">
+                                            <img src="./media/img/rooms/room5.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div class="card">
+                                    <div class="content w-full h-full">
+                                        <div class="img w-full" data-src="./media/img/rooms/room2.jpg">
+                                            <img src="./media/img/rooms/room6.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div class="card">
+                                    <div class="content w-full h-full">
+                                        <div class="img w-full" data-src="./media/img/rooms/room2.jpg">
+                                            <img src="./media/img/rooms/room7.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div class="card">
+                                    <div class="content w-full h-full">
+                                        <div class="img w-full" data-src="./media/img/rooms/room2.jpg">
+                                            <img src="./media/img/rooms/room8.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div class="card">
+                                    <div class="content w-full h-full">
+                                        <div class="img w-full" data-src="./media/img/rooms/room2.jpg">
+                                            <img src="./media/img/rooms/room9.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div class="card">
+                                    <div class="content w-full h-full">
+                                        <div class="img w-full" data-src="./media/img/rooms/room2.jpg">
+                                            <img src="./media/img/rooms/room10.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div class="card">
+                                    <div class="content w-full h-full">
+                                        <div class="img w-full" data-src="./media/img/rooms/room2.jpg">
+                                            <img src="./media/img/rooms/room11.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="glide__arrows flex items-center justify-center gap-5 mt-5" data-glide-el="controls">
+                        <button data-glide-dir="<"
+                            class="glide__arrow glide__arrow--left bg-sky-950 text-white text-2xl py-1.5 px-2.5 rounded-4xl cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                style="fill: rgb(255, 255, 255)">
+                                <path
+                                    d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z">
+                                </path>
+                            </svg>
+                        </button>
+                        <button data-glide-dir=">"
+                            class="glide__arrow glide__arrow--right bg-sky-950 text-white text-2xl py-1.5 px-2.5 rounded-4xl cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                style="fill: rgb(255, 255, 255)">
+                                <path
+                                    d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <section id="offer-pricing">
+            <div class="content mt-10 md:p-4 px-2 py-4 bg-sky-950">
+                <div class="header flex justify-around gap-0.5 text-white">
+                    <div class="left-content lg:w-full md:w-[60%] w-[56%]">
+                        <h1 class=" uppercase lg:text-4xl md:text-3xl text-base w-4/5 font-bold">Chambre Familiale en petit déjeuner</h1>
+                        <p class=" text-xs w-fit">(2 Adultes + 2 enfants de - de 12 ans)</p>
+                    </div>
+                    <div class="right-content flex justify-center items-center md:gap-4 gap-1">
+                        <div class="price lg:text-7xl md:text-6xl text-3xl font-black ">600</div>
+                        <div class="text w-full">
+                            <div class="coruncy md:text-3xl text-lg uppercase font-bold">mad</div>
+                            <p class=" text-[10px]">par personne par nuit</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="counter-time" class="w-full">
+            <div class="content mt-10 w-[90%] mx-auto">
+                <div class="countdown mt-12 flex items-center gap-10">
+                    <div class="box">
+                        <span id="hours">00</span>
+                        <div class="point"></div>
+                    </div>
+                    <div class="box">
+                        <span id="minutes">00</span>
+                        <div class="point"></div>
+                    </div>
+                    <div class="box">
+                        <span id="seconds">00</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="add-value" class="w-full bg-sky-950">
+            <div class="content mt-16 flex gap-10">
+                <div class="left-content w-1/2">
+                    <div class="container w-full h-auto">
+                        <div class="add-value-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="right-content w-1/2 p-5">
+                    <div class="container w-full h-full flex flex-col justify-around">
+                        <div class="title">
+                            <h1 class="text-white text-4xl font-bold mt-5 uppercase">Added Values :</h1>
+                        </div>
+                        <div class="value mt-10">
+                            <ul class="text-white ml-10 list-disc">
+                                <li class=" mb-2.5">20 % de réduction sur la carte Spa</li>
+                                <li class=" mb-2.5">Early check in et late check out (selon disponibilité )</li>
+                                <li class=" mb-2.5">Accès gratuit à la salle de sport</li>
+                                <li class=" mb-2.5">Supplément Single : 300Mad</li>
+                                <li class=" mb-2.5">Taxe de séjour de 28,60 MAD par nuit</li>
+                            </ul>
+                        </div>
+                        <div class="calltoaction-add-value mt-10">
+                            <div class="btn-booking">
+                                <button
+                                    class="openReservation bg-white px-5 py-3 uppercase font-black text-sky-950 cursor-pointer">
+                                    Réservez Votre séjour</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="offer" class="w-full overflow-hidden">
+            <div class="content mt-16 w-[90%] mx-auto">
+                <div class="offer-title relative ">
+                    <h1 class="font-black text-4xl text-center w-4/5 m-auto uppercase">OFFRE LIMITÉE : <span
+                            class="text-[#790108] text-6xl">-20%</span> SUR LE SPA, ACCÈS GRATUIT À LA SALLE DE SPORT,
+                        EARLY CHECK-IN & PLUS ENCORE – RÉSERVEZ AVANT QU’IL NE SOIT TROP TARD !</h1>
+                    <div class="mt-10 place-self-center">
+                        <button style="text-shadow: 0 0 4px #ffffff;"
+                            class="openReservation bg-sky-950 px-5 py-3 uppercase font-bold text-white text-3xl cursor-pointer">Réservez Votre séjour</button>
+                    </div>
+                    <div class="add-value-arrow absolute right-0 top-0">
+                        <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1080 1080"
+                            enable-background="new 0 0 1080 1080" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path fill="#790108"
+                                        d="M237.8,311.1c81.7,12.8,166.8,49.2,226.4,107.4c47,45.5,77.5,107.3,84.9,172.3
+                                        c3.5,30.2-0.1,67.5-28.3,85.3c-19.2,12.1-43.6,11.8-64.9,6.7c-33.5-8.2-71.7-30.8-87-62.9c-1.8-3.9-3.1-7.9-4-12.1
+                                        c-1.8-10.6-1.4-21.6,1.3-32.1c14.2-50.8,72.4-75.3,119.7-85.1c79.7-15.5,170.9-2.9,234.3,50.7c40.4,37.1,72.4,84.8,88.7,137.3
+                                        c6.2,20.7,10.4,42.2,9.9,63.9c0.2-14.4-2.1-28.7-5.3-42.7c-6.5-28-17.8-54.8-32.5-79.4c-16.7-27.5-37.1-53-60.9-74.7
+                                        c-8-7.1-16.7-13.4-25.8-19C639,493.1,571.4,484,508.1,492.1c-35,4.9-70.3,15.3-99.4,35.8c-17,12.2-31.6,28.8-36.9,49.3
+                                        c-2.5,9.6-2.9,19.7-1.2,29.5c1.5,7.1,4.7,13.8,8.7,19.9c24.4,36.2,87,65.4,129.5,49.5c1.3-0.5,3.4-1.5,4.7-2.1
+                                        c0.8-0.5,2.6-1.4,3.4-1.8c0,0,1.1-0.7,1.1-0.7s2.1-1.4,2.1-1.4c3.4-2.5,6.7-5.4,9.4-8.6c17.1-20.7,17-49.9,14-75.3
+                                        c-11.7-91.1-67.1-167.7-145.2-214.5C349.3,341.6,294.3,321.1,237.8,311.1L237.8,311.1z" />
+                                </g>
+                                <g>
+                                    <path fill="#790108"
+                                        d="M791.8,736.6c11.8,7.5,22.6,16.3,33.1,25.5c0,0-4.5,0.9-4.5,0.9c6.4-13.4,13.4-26.6,21.9-38.8
+                                        c-4.6,15.5-11.3,30.3-18.3,44.8C812.6,758.8,801.4,748.4,791.8,736.6L791.8,736.6z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="video  w-full">
+            <div class="content mt-16 w-[90%] mx-auto p-10 flex items-center justify-center">
+                <iframe class=" rounded-2xl" width="100%" height="500px"
+                    src="https://www.youtube.com/embed/wm5gMKuwSYk?si=XehSRh9VJGAie8hg" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+        <section class="reviews  w-full">
+            <div class="content w-[100%] mx-auto mt-16">
+                <div class="reviews-glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides items-stretch">
+                            <!-- Card 1 -->
+                            <li class="glide__slide flex">
+                                <div
+                                    class="bg-[#052f4a] rounded-2xl shadow-lg max-w-sm w-full mx-auto overflow-hidden flex flex-col h-full">
+                                    <div class="flex items-center gap-4 p-4 flex-shrink-0">
+                                        <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Profile"
+                                            class="w-16 h-16 rounded-full border-2 border-white shadow-md">
+                                        <div>
+                                            <h3 class="text-white text-lg font-semibold">Sean</h3>
+                                            <div class="text-yellow-400 text-sm">★★★★★</div>
+                                            <p class="text-xs text-gray-300">Gibraltar</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white px-4 py-3 text-sm text-gray-700 flex-1">
+                                        <p>“Excellent personnel et emplacement. Bonnes installations et spa.”</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Card 2 -->
+                            <li class="glide__slide flex">
+                                <div
+                                    class="bg-[#052f4a] rounded-2xl shadow-lg max-w-sm w-full mx-auto overflow-hidden flex flex-col h-full">
+                                    <div class="flex items-center gap-4 p-4 flex-shrink-0">
+                                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Profile"
+                                            class="w-16 h-16 rounded-full border-2 border-white shadow-md">
+                                        <div>
+                                            <h3 class="text-white text-lg font-semibold">Marwan</h3>
+                                            <div class="text-yellow-400 text-sm">★★★★★</div>
+                                            <p class="text-xs text-gray-300">United Kingdom</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white px-4 py-3 text-sm text-gray-700 flex-1">
+                                        <p>“l'hotel , le hall , les jardins de l'hotel, les piscines !!! pour les enfants c'est top , le petit déjeuner , le cadre beldi de l'hotel, pas d'alcool et pas d'animation donc pas de bruit à l'hotel, le personnel très sympathique souriants et efficace rien à dire”</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Card 3 -->
+                            <li class="glide__slide flex">
+                                <div
+                                    class="bg-[#052f4a] rounded-2xl shadow-lg max-w-sm w-full mx-auto overflow-hidden flex flex-col h-full">
+                                    <div class="flex items-center gap-4 p-4 flex-shrink-0">
+                                        <img src="https://randomuser.me/api/portraits/women/30.jpg" alt="Profile"
+                                            class="w-16 h-16 rounded-full border-2 border-white shadow-md">
+                                        <div>
+                                            <h3 class="text-white text-lg font-semibold">Asmae</h3>
+                                            <div class="text-yellow-400 text-sm">★★★★★</div>
+                                            <p class="text-xs text-gray-300">United Kingdom</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white px-4 py-3 text-sm text-gray-700 flex-1">
+                                        <p>“Je suis sortie et à mon retour, le verrou de la porte ne fonctionnait plus. J'ai du attendre un bon moment. Heureusement que l'un des personnel a pensé a ouvrir une autre chambre pour me reposer. J'ai finalement changé de chambre. Malheureusement il n'y avait pas de table dans le balcon mais sinon c'était très bien”</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Card 4 -->
+                            <li class="glide__slide flex">
+                                <div
+                                    class="bg-[#052f4a] rounded-2xl shadow-lg max-w-sm w-full mx-auto overflow-hidden flex flex-col h-full">
+                                    <div class="flex items-center gap-4 p-4 flex-shrink-0">
+                                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Profile"
+                                            class="w-16 h-16 rounded-full border-2 border-white shadow-md">
+                                        <div>
+                                            <h3 class="text-white text-lg font-semibold">Mohammad</h3>
+                                            <div class="text-yellow-400 text-sm">★★★★★</div>
+                                            <p class="text-xs text-gray-300">United Kingdom</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white px-4 py-3 text-sm text-gray-700 flex-1">
+                                        <p>“Le personnel et la nourriture . La chambre aussi et la piscine en septembre déjà j’avais kiffais”</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Card 5 -->
+                            <li class="glide__slide flex">
+                                <div
+                                    class="bg-[#052f4a] rounded-2xl shadow-lg max-w-sm w-full mx-auto overflow-hidden flex flex-col h-full">
+                                    <div class="flex items-center gap-4 p-4 flex-shrink-0">
+                                        <img src="https://randomuser.me/api/portraits/men/66.jpg" alt="Profile"
+                                            class="w-16 h-16 rounded-full border-2 border-white shadow-md">
+                                        <div>
+                                            <h3 class="text-white text-lg font-semibold">Noel</h3>
+                                            <div class="text-yellow-400 text-sm">★★★★★</div>
+                                            <p class="text-xs text-gray-300">United States</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white px-4 py-3 text-sm text-gray-700 flex-1">
+                                        <p>“Chambres propres et très spacieuses, Petit déjeuner varié, Personnel gentil et souriant”</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Card 6 to 10 (copy-paste above and modify name/img/text) -->
+                            <li class="glide__slide flex">
+                                <div
+                                    class="bg-[#052f4a] rounded-2xl shadow-lg max-w-sm w-full mx-auto overflow-hidden flex flex-col h-full">
+                                    <div class="flex items-center gap-4 p-4 flex-shrink-0">
+                                        <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Profile"
+                                            class="w-16 h-16 rounded-full border-2 border-white shadow-md">
+                                        <div>
+                                            <h3 class="text-white text-lg font-semibold">Lina Omar</h3>
+                                            <div class="text-yellow-400 text-sm">★★★★☆</div>
+                                            <p class="text-xs text-gray-300">Germany</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white px-4 py-3 text-sm text-gray-700 flex-1">
+                                        <p>“Trop calme et apaisant comme hôtel et endroit, J’ai adoré la décoration et la bonne odeur des plantes au spa.”</p>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-sky-950 text-white text-center py-4 mt-12">
+        <p class="text-sm">&copy; 2025 Mogador Hotels. All rights reserved.</p>
+    </footer>
+
+
+
+    <script type="module" src="./index.js"></script>
+    <script>
+        const openBtns = document.querySelectorAll(".openReservation");
+        const closeBtn = document.getElementById("closePopup");
+        const popup = document.getElementById("reservationPopup");
+
+        openBtns.forEach((item) => {
+            item.addEventListener("click", () => {
+                popup.classList.remove("hidden");
+                popup.classList.add("flex");
+            });
+        })
+
+        closeBtn.addEventListener("click", () => {
+            popup.classList.remove("flex");
+            popup.classList.add("hidden");
+        });
+
+        window.addEventListener("click", (e) => {
+            if (e.target === popup) {
+                popup.classList.remove("flex");
+                popup.classList.add("hidden");
+            }
+        });
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+    <script type="module" src="./src/slider/rooms.js"></script>
+    <script type="module" src="./src/slider/reviews.js"></script>
+
+</body>
+
+</html>

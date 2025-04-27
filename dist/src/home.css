@@ -1,0 +1,364 @@
+/* Start Header Style */
+
+.hero {
+    background-image: url("../media/img/offer/offer.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.hero > .content {
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 40px 0px;
+}
+
+.hero > .overflow-bg{
+    background: linear-gradient( 0deg, #052f4a, transparent);
+}
+
+
+.btn-booking::before,
+.btn-booking::after {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    font-weight: bold;
+    color: white;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    right: 0;
+}
+
+.btn-booking::before {
+    content: attr(data-offer);
+    font-size: 20px;
+    background-color: #790108;
+    padding-top: 4px;
+    top: -58px;
+    z-index: -1;
+    border: 1px solid #fff;
+
+}
+
+.btn-booking::after {
+    content: attr(data-discount);
+    font-size: 26px;
+    top: -34px;
+}
+
+.hero .hero-arrow {
+    width: 70%;
+    top: -65px;
+    right: -155px;
+    transform: rotate(120deg);
+}
+
+.hero .hero-arrow::before {
+    content: "BOOK NOW";
+    position: absolute;
+    top: -4px;
+    right: 103px;
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    transform: rotate(-120deg);
+    animation: textShadow .5s infinite;
+    
+}
+
+
+.sticky-booking-btn {
+    box-shadow: 0 0 12px 0 #000000b8;
+}
+
+
+/* Animation */
+
+@keyframes textShadow {
+    0% {
+        text-shadow: 0 0 0 #ffffff;
+    }
+    100% {
+        text-shadow: 0 0 12px #ffffff;
+    }
+}
+
+/* End Header Style */
+
+
+/* Start Main Style */
+
+/* ----- countdown */
+
+.countdown {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.countdown .box {
+    position: relative;
+    width: calc(10px * 10);
+    height: calc(11px * 10);
+    background-color: oklch(29.3% 0.066 243.157);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.countdown .box span {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.countdown .box span::before {
+    content: "";
+    position: absolute;
+    width: 86%;
+    height: 90%;
+    border: 3px solid white;
+    left: 7px;
+    top: 5px;
+}
+
+.countdown .box:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 55px;
+    background-color: oklch(29.3% 0.066 243.157);
+    right: -30px;
+    top: 33px;
+}
+
+.countdown .box:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 15px;
+    background-color: white;
+    right: -30px;
+    top: 55%;
+    transform: translateY(-50%);
+}
+
+.countdown .box .point,
+.countdown .box .point::before {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 3px solid #fff;
+    right: -25px;
+    top: 38px;
+}
+
+.countdown .box .point::before {
+    content: "";
+    right: -2px;
+    top: 33px;
+}
+
+/* ----- Enf countdown */
+
+/* ----- Swiper rooms */
+
+/* .glide__slide > .card {
+    background-color: #ffffff;
+    border: 10px solid oklch(29.3% 0.066 243.157);
+} */
+
+
+.card .img  img {
+    border-radius: 20px;
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* .display-gallery {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto; /
+}
+
+#gallery-show {
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+    display: block;
+} */
+
+/* add value section */
+
+
+
+#add-value .add-value-img {
+    height: 560px;
+    background: url("../media/img/offer/offer.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.add-value-arrow  {
+    width: 22%;
+    top: 65px;
+    right: 100px;
+    transform: rotate(104deg);
+}
+
+
+/* responsive */
+
+
+@media screen and (max-width: 768px) {
+
+    .hero .content .title h1 {
+        font-size: 50px;
+    }
+
+    #counter-time .header h1 {
+        font-size: 33px;
+        width: 90%;
+    }
+
+
+    #add-value .content {
+        width: 100%;
+        height: 100%;
+    }
+    #add-value .left-content .container,
+    #add-value .left-content .container .add-value-img {
+        width: 100%;
+        height: 100%;
+    }
+    .calltoaction-add-value .btn-booking .openReservation  {
+        font-size: 15px;
+    }
+
+
+    #offer .offer-title h1 {
+        font-size: 30px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .hero > .content {
+        padding: 40px 0 70px 0;
+    }
+    .hero .title  h1 {
+        font-size: 35px !important;
+        width: fit-content; 
+    }
+    .hero .desc p {
+        width: fit-content;
+    }
+    .hero .hero-arrow {
+        width: 58%;
+        top: 14px;
+        right: 83px;
+        transform: rotate(157deg);
+    }
+    .hero .hero-arrow::before {
+        top: 6px;
+        right: 132px;
+        transform: rotate(202deg);
+    }
+
+
+    #rooms-gallery .content {
+        width: 100%;
+    }
+
+
+    #counter-time .header h1 {
+        font-size: 24px;
+        width: 100%;
+        font-weight: 800;
+    }
+    #counter-time .header h1 span {
+        font-size: 40px;
+    }
+
+    #add-value .content {
+        flex-direction: column
+    }
+    #add-value .content .left-content {
+        width: 100%;
+        height: 350px;
+    }
+    #add-value .content .right-content {
+        width: 100%;
+    }
+    #add-value .content .right-content h1 {
+        font-size: 30px;
+        margin: 0px;
+    }
+    #add-value .content .right-content .calltoaction-add-value .btn-booking {
+        text-align: center;
+    }
+
+
+    #offer .offer-title h1 {
+        font-size: 24px;
+    }
+    #offer .offer-title h1 span {
+        font-size: 40px;
+    }
+    #offer .add-value-arrow {
+        width: 45%;
+        top: 107px;
+        right: -49px;
+        transform: rotate(10deg);
+    }
+    #offer .offer-title .place-self-center {
+        margin-top: 50px;
+    }
+
+
+    .video .content {
+        padding: 0%;
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    
+    .hero .title  h1 {
+        font-size: 38px;
+    }
+    .hero .desc p {
+        font-size: 16px;
+
+    }
+
+
+    #counter-time .header h1 {
+        font-size: 22px;
+        width: 100%;
+        font-weight: 800;
+    }
+    #counter-time .header h1 span {
+        font-size: 40px;
+    }
+
+
+    #offer .offer-title h1 {
+        font-size: 24px;
+    }
+    #offer .offer-title h1 span {
+        font-size: 40px;
+    }
+    #offer .add-value-arrow {
+        top: 134px;
+        right: -13px;
+    }
+}

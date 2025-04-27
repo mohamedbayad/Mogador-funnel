@@ -1,0 +1,28 @@
+{
+  "name": "funnel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/style.css --watch",
+    "start": "node ./server/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@glidejs/glide": "^3.7.1",
+    "@tailwindcss/cli": "^4.1.4",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2",
+    "swiper": "^11.2.6",
+    "tailwindcss": "^4.1.4"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "wait-on": "^8.0.3"
+  }
+}

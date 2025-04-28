@@ -253,6 +253,7 @@
 @media screen and (max-width: 500px) {
     .hero > .content {
         padding: 40px 0 70px 0;
+        align-items: center;
     }
     .hero .title  h1 {
         font-size: 35px !important;

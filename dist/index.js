@@ -83,7 +83,7 @@ startCountdown();
 
   document.addEventListener("scroll", () => {
 
-    if (window.scrollY >= 600) {
+    if (window.scrollY >= 700) {
       if (!show) {
         resPopUp.classList.remove("hidden");
         resPopUp.classList.add("flex");
